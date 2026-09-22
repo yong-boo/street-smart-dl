@@ -48,8 +48,53 @@ function ReleaseMeta({ dark = false }: { dark?: boolean }) {
   return <div className={`release-meta ${dark ? "dark" : ""}`}><span><b>Latest</b>{latestRelease.version}</span><span><b>Size</b>{latestRelease.apkSize}</span><span><b>Requires</b>{latestRelease.minAndroid}</span></div>;
 }
 
+function MobileLanding() {
+  return <div className="mobile-experience">
+    <header className="mobile-app-bar">
+      <a href="#mobile-top" className="brand"><BrandMark /><span>StreetSmart</span></a>
+      <a className="mobile-app-bar-action" href="#mobile-download">Get app</a>
+    </header>
+
+    <section id="mobile-top" className="mobile-hero-section">
+      <p className="mobile-overline">STREETSMART FOR ANDROID</p>
+      <h1>Know the road.<br /><em>Help improve it.</em></h1>
+      <p>Spot a problem, send a useful report and see what your community has noticed.</p>
+      <DownloadButton />
+      <p className="mobile-safe-note">Free to download · Official release</p>
+      <div className="mobile-hero-phone"><Phone type="home" /></div>
+    </section>
+
+    <section className="mobile-purpose-section">
+      <p className="mobile-overline">ONE SIMPLE LOOP</p>
+      <h2>From what you see to something useful.</h2>
+      <div className="mobile-purpose-list">
+        <div><b>01</b><span><strong>Notice</strong><small>See a road issue while you are out.</small></span></div>
+        <div><b>02</b><span><strong>Report</strong><small>Add a photo and the important details.</small></span></div>
+        <div><b>03</b><span><strong>Follow</strong><small>Understand the bigger picture on the map.</small></span></div>
+      </div>
+    </section>
+
+    <section className="mobile-screens-section">
+      <div className="mobile-section-copy"><p className="mobile-overline">MADE FOR THE MOMENT</p><h2>Clear tools, right when you need them.</h2></div>
+      <article className="mobile-screen-card scan-card"><div><span>01 / LIVE SCAN</span><h3>See potential road damage as you move.</h3><p>Use your phone camera to spot what needs a closer look.</p></div><Phone type="detect" /></article>
+      <article className="mobile-screen-card report-card"><div><span>02 / REPORT</span><h3>Turn an observation into a clear report.</h3><p>Add context in a few focused steps.</p></div><Phone type="report" /></article>
+      <article className="mobile-screen-card map-card"><div><span>03 / MAP</span><h3>See the road network more clearly.</h3><p>View reports around you and follow verified issues.</p></div><Phone type="map" /></article>
+    </section>
+
+    <section id="mobile-download" className="mobile-download-section">
+      <p className="mobile-overline">READY WHEN YOU ARE</p><h2>Start with one road.</h2><p>Download StreetSmart and make the next observation count.</p><DownloadButton light /><ReleaseMeta dark />
+    </section>
+
+    <section className="mobile-faq-section">
+      <p className="mobile-overline">GOOD TO KNOW</p><h2>Before you download.</h2>
+      <div className="mobile-faq-list">{faqs.slice(0, 4).map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
+    </section>
+    <footer className="mobile-footer"><a href="#mobile-top" className="brand"><BrandMark /><span>StreetSmart</span></a><p>Made for better roads.</p></footer>
+  </div>;
+}
+
 export default function Home() {
-  return <main>
+  return <main><MobileLanding /><div className="desktop-experience">
     <header className="site-header">
       <a href="#top" className="brand"><BrandMark /><span>StreetSmart</span></a>
       <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a></nav>
@@ -79,5 +124,5 @@ export default function Home() {
     <section id="faq" className="faq section-wrap"><div><p className="eyebrow"><span /> QUESTIONS, ANSWERED</p><h2>Good to know.</h2><p>Everything you need before downloading StreetSmart.</p></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></section>
 
     <footer><a href="#top" className="brand"><BrandMark /><span>StreetSmart</span></a><div className="footer-links"><a href="#top">About</a><a href="#download">Download</a><a href="#faq">FAQ</a><a href="#privacy">Privacy policy</a><a href="mailto:hello@streetsmart.app">Contact</a></div><p>© 2026 StreetSmart. Made for better roads.</p></footer>
-  </main>;
+  </div></main>;
 }

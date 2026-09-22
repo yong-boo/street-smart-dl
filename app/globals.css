@@ -233,3 +233,71 @@ footer{max-width:1170px;margin:auto;padding:36px 32px;display:grid;grid-template
   .faq { background:#edf4f1; }
   footer { background:#fff; }
 }
+
+/* A dedicated information hierarchy for phones, rather than a compressed desktop page. */
+.mobile-experience { display:none; }
+
+@media (max-width:640px) {
+  .desktop-experience { display:none; }
+  .mobile-experience { display:block; min-height:100vh; background:#f7faf9; color:#153b42; }
+  .mobile-app-bar { height:64px; padding:0 18px; display:flex; align-items:center; justify-content:space-between; background:rgba(247,250,249,.94); border-bottom:1px solid #dce8e5; position:sticky; top:0; z-index:10; backdrop-filter:blur(12px); }
+  .mobile-app-bar .brand { font-size:17px; gap:8px; }
+  .mobile-app-bar .brand-mark { width:28px; height:28px; }
+  .mobile-app-bar-action { padding:9px 12px; border-radius:999px; background:#dff1ee; color:#08718d; font-size:12px; font-weight:700; }
+  .mobile-overline { margin:0 0 13px; color:#08718d; font-size:10px; font-weight:800; letter-spacing:1.45px; }
+
+  .mobile-hero-section { padding:37px 20px 0; overflow:hidden; text-align:center; background:linear-gradient(180deg,#f7faf9 0%,#e8f3f0 100%); }
+  .mobile-hero-section h1 { margin:0; color:#143c43; font-size:39px; line-height:1.03; letter-spacing:-1.55px; }
+  .mobile-hero-section h1 em { color:#08718d; font-style:normal; }
+  .mobile-hero-section > p:not(.mobile-overline):not(.mobile-safe-note) { max-width:330px; margin:17px auto 23px; color:#5d7478; font-size:16px; line-height:1.55; }
+  .mobile-hero-section .download-button { width:100%; min-height:57px; border-radius:13px; text-align:left; }
+  .mobile-safe-note { margin:12px 0 0; color:#6e8789; font-size:11px; }
+  .mobile-hero-phone { height:342px; margin:23px auto 0; position:relative; }
+  .mobile-hero-phone:before { content:""; position:absolute; width:305px; height:305px; left:50%; top:17px; transform:translateX(-50%); border:1px solid #c4ddd7; border-radius:50%; box-shadow:0 0 0 38px rgba(255,255,255,.25),0 0 0 77px rgba(255,255,255,.16); }
+  .mobile-hero-phone .phone.actual-screen { width:168px; height:auto; margin:auto; position:relative; z-index:1; border-radius:21px; box-shadow:0 22px 35px rgba(11,59,66,.22); }
+
+  .mobile-purpose-section { padding:54px 20px 57px; }
+  .mobile-purpose-section h2,.mobile-section-copy h2,.mobile-download-section h2,.mobile-faq-section h2 { margin:0; color:#163b42; font-size:30px; line-height:1.12; letter-spacing:-1.1px; }
+  .mobile-purpose-list { margin-top:28px; display:grid; gap:8px; }
+  .mobile-purpose-list > div { display:grid; grid-template-columns:35px 1fr; gap:13px; align-items:center; padding:14px; border:1px solid #d9e6e3; border-radius:14px; background:#fff; }
+  .mobile-purpose-list b { width:30px; height:30px; display:grid; place-items:center; border-radius:50%; background:#dff1ee; color:#08718d; font-size:10px; }
+  .mobile-purpose-list strong,.mobile-purpose-list small { display:block; }
+  .mobile-purpose-list strong { color:#234c53; font-size:14px; }
+  .mobile-purpose-list small { margin-top:3px; color:#70878a; font-size:12px; line-height:1.35; }
+
+  .mobile-screens-section { padding:53px 20px 58px; background:#164b57; }
+  .mobile-screens-section .mobile-overline { color:#9fdddd; }
+  .mobile-section-copy h2 { color:#fff; }
+  .mobile-screen-card { margin-top:23px; padding:22px 18px 0; overflow:hidden; border-radius:19px; position:relative; min-height:421px; display:flex; flex-direction:column; align-items:center; }
+  .mobile-screen-card > div { align-self:stretch; position:relative; z-index:1; }
+  .mobile-screen-card span { color:#3b7d84; font-size:10px; font-weight:800; letter-spacing:1px; }
+  .mobile-screen-card h3 { margin:9px 0 7px; color:#173e46; font-size:22px; line-height:1.12; letter-spacing:-.75px; }
+  .mobile-screen-card p { margin:0; color:#547378; font-size:13px; line-height:1.5; }
+  .mobile-screen-card .phone.actual-screen { width:155px; height:auto; margin:22px auto 0; border:3px solid #123842; border-bottom:0; border-radius:22px 22px 0 0; box-shadow:0 14px 24px rgba(9,42,47,.18); }
+  .scan-card { background:linear-gradient(145deg,#d5ebe5,#f3faf7); }
+  .report-card { background:linear-gradient(145deg,#f5ecd9,#fcfaf4); }
+  .map-card { background:linear-gradient(145deg,#d9ebf0,#f4fafb); }
+
+  .mobile-download-section { padding:56px 20px; background:linear-gradient(145deg,#08718d,#075f75); color:#fff; }
+  .mobile-download-section .mobile-overline { color:#afe3e3; }
+  .mobile-download-section h2 { color:#fff; }
+  .mobile-download-section > p:not(.mobile-overline) { margin:14px 0 24px; color:#d4ebed; font-size:15px; line-height:1.55; }
+  .mobile-download-section .download-button.light { width:100%; min-height:57px; border-radius:13px; }
+  .mobile-download-section .release-meta { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-top:24px; }
+  .mobile-download-section .release-meta span { padding:9px 7px; border:1px solid rgba(255,255,255,.25); border-radius:10px; color:#e8f7f7; font-size:11px; }
+  .mobile-download-section .release-meta span:first-child { border-left:1px solid rgba(255,255,255,.25); }
+  .mobile-download-section .release-meta b { color:#b8dcdf; font-size:9px; letter-spacing:.6px; }
+
+  .mobile-faq-section { padding:56px 20px; background:#eef5f2; }
+  .mobile-faq-list { margin-top:25px; display:grid; gap:8px; }
+  .mobile-faq-list details { border:1px solid #cbded9; border-radius:12px; background:#fff; }
+  .mobile-faq-list summary { padding:16px; display:flex; justify-content:space-between; gap:15px; cursor:pointer; list-style:none; color:#294e54; font-size:14px; font-weight:700; }
+  .mobile-faq-list summary::-webkit-details-marker { display:none; }
+  .mobile-faq-list summary span { color:#08718d; font-size:20px; font-weight:400; line-height:14px; }
+  .mobile-faq-list details[open] summary span { transform:rotate(45deg); }
+  .mobile-faq-list p { margin:0; padding:0 16px 17px; color:#617a7e; font-size:13px; line-height:1.55; }
+  .mobile-footer { padding:28px 20px 34px; display:flex; justify-content:space-between; align-items:center; background:#fff; }
+  .mobile-footer .brand { font-size:16px; gap:8px; }
+  .mobile-footer .brand-mark { width:26px; height:26px; }
+  .mobile-footer p { margin:0; color:#789094; font-size:11px; }
+}
