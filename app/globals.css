@@ -190,3 +190,46 @@ footer{max-width:1170px;margin:auto;padding:36px 32px;display:grid;grid-template
   footer { padding:30px 16px 34px; gap:19px; }
   .footer-links { gap:10px 16px; }
 }
+
+/* Phone-first polish: compact surfaces and a clear thumb-friendly reading flow. */
+@media (max-width:640px) {
+  body { background:#edf3f2; }
+  main { background:var(--paper); }
+  .site-header { position:sticky; top:0; background:rgba(251,251,248,.93); border-bottom:1px solid rgba(217,229,226,.82); box-shadow:0 5px 18px rgba(20,57,62,.05); backdrop-filter:blur(12px); }
+  .hero { padding-top:31px; padding-bottom:0; background:linear-gradient(180deg,#fbfbf8 0%,#f2f8f6 100%); border-radius:0 0 28px 28px; }
+  .hero h1 { font-size:40px; max-width:350px; }
+  .hero-text { color:#587075; }
+  .download-button { min-height:56px; box-shadow:0 12px 22px rgba(8,113,141,.19); }
+  .release-meta { gap:7px; margin-top:25px; }
+  .release-meta span { padding:10px 8px; border:1px solid #d9e6e3; border-radius:11px; background:rgba(255,255,255,.78); }
+  .release-meta span:first-child { border:1px solid #d9e6e3; }
+  .release-meta b { margin-bottom:4px; }
+  .hero-visual { height:361px; margin-top:14px; }
+  .hero-ring { width:320px; height:320px; top:12px; }
+  .hero-visual .phone.actual-screen { width:178px; top:9px; }
+
+  .intro, .how, .install { background:var(--paper); }
+  .intro h2, .section-heading h2, .how h2, .showcase h2, .install h2, .faq h2 { font-size:32px; }
+  .intro-stat { width:100%; max-width:none; border:1px solid #d9e6e3; border-left:3px solid var(--teal); border-radius:12px; background:#f4faf8; padding:14px 15px; }
+  .intro-stat strong { font-size:16px; }
+
+  .features { background:#e8f2ef; }
+  .feature { display:grid; grid-template-columns:40px 1fr; column-gap:14px; align-items:start; padding:18px; background:#fff; border:1px solid #d8e5e2; box-shadow:none; }
+  .feature-number { grid-column:1; grid-row:1; align-self:center; margin:0; }
+  .feature-icon { grid-column:2; grid-row:1; width:38px; height:38px; margin:0; }
+  .feature h3 { grid-column:2; margin:7px 0 5px; font-size:17px; }
+  .feature p { grid-column:2; font-size:13px; line-height:1.5; }
+
+  .how li { background:#f7fbfa; border-color:#dce8e5; }
+  .how-visual { min-height:430px; background:linear-gradient(145deg,#dcefea,#f4faf8); }
+  .showcase { border-radius:28px 28px 0 0; }
+  .showcase-devices > .phone.actual-screen { width:184px; }
+  .showcase-devices > .showcase-copy { border-left:2px solid #78ccca; }
+
+  .mission { background:#f5f7f4; }
+  .download-section { background:linear-gradient(145deg,#08718d,#075f75); }
+  .release-panel { box-shadow:0 14px 30px rgba(0,37,48,.22); }
+  .install-steps { padding:5px 0 5px 22px; border-radius:14px; background:#f7fbfa; }
+  .faq { background:#edf4f1; }
+  footer { background:#fff; }
+}
