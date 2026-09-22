@@ -107,3 +107,86 @@ footer{max-width:1170px;margin:auto;padding:36px 32px;display:grid;grid-template
 @media(max-width:560px){.faq{padding-top:62px;padding-bottom:62px}.faq summary{padding:15px;font-size:14px}.faq details p{padding:0 15px 16px}}
 
 @media(max-width:560px){.release-panel{border-radius:13px;padding:22px 18px}.download-button.light{width:max-content;max-width:none}}
+
+/* Mobile is a focused landing experience: one app screen at a time, full-width
+   actions, and no decorative elements competing with the content. */
+@media (max-width:640px) {
+  .site-header { height:64px; padding:0 16px; }
+  .brand { gap:8px; font-size:17px; }
+  .brand-mark { width:27px; height:27px; }
+  .mobile-menu summary { width:40px; height:40px; display:grid; place-items:center; border:1px solid #d9e5e2; border-radius:12px; font-size:21px; line-height:1; }
+  .mobile-menu[open] > div { right:16px; top:56px; min-width:190px; padding:8px; border:1px solid #dfe9e6; border-radius:14px; box-shadow:0 16px 32px rgba(18,55,61,.16); }
+  .mobile-menu a { padding:12px 13px; border-radius:9px; }
+  .mobile-menu a:hover { background:#edf6f3; }
+
+  .hero { padding:38px 16px 0; }
+  .eyebrow { margin-bottom:16px; font-size:10px; letter-spacing:1.35px; }
+  .hero h1 { font-size:42px; line-height:1.01; letter-spacing:-1.45px; margin-bottom:18px; }
+  .hero-text { font-size:16px; line-height:1.55; margin-bottom:24px; }
+  .hero-actions { gap:13px; width:100%; }
+  .download-button, .download-button.light { width:100%; min-width:0; justify-content:flex-start; border-radius:11px; padding:13px 14px; }
+  .download-button.light { max-width:none; }
+  .text-link { padding:5px 2px; }
+  .release-meta { display:grid; grid-template-columns:repeat(3, 1fr); width:100%; margin-top:27px; }
+  .release-meta span { min-width:0; padding:0 10px; font-size:11px; }
+  .release-meta b { font-size:9px; letter-spacing:.7px; }
+  .release-date { margin-top:12px; }
+  .hero-visual { height:378px; margin:22px -16px 0; }
+  .hero-ring { width:338px; height:338px; top:12px; }
+  .hero-visual .phone.actual-screen { width:186px; top:7px; transform:translateX(-50%); border-radius:20px; box-shadow:0 20px 34px rgba(7,55,65,.24); }
+  .hero-visual .location-note { display:none; }
+
+  .section-wrap { padding-left:16px; padding-right:16px; }
+  .intro { padding-top:58px; padding-bottom:61px; gap:17px; }
+  .section-kicker { padding-top:0; font-size:10px; }
+  .intro h2, .section-heading h2, .how h2, .showcase h2, .install h2, .faq h2 { font-size:33px; line-height:1.1; letter-spacing:-1.15px; }
+  .intro p, .how-copy > p:not(.eyebrow), .showcase-title > p:not(.eyebrow), .download-left > p:not(.eyebrow), .faq > div > p:not(.eyebrow) { font-size:15px; }
+  .intro-stat { margin-top:5px; padding:12px 0 12px 16px; }
+
+  .features { padding:60px 16px; }
+  .section-heading { margin-bottom:28px; }
+  .feature-grid { gap:10px; }
+  .feature { min-height:0; padding:20px; border-radius:13px; }
+  .feature h3 { margin:15px 0 8px; }
+  .feature p { margin-bottom:0; }
+
+  .how { padding-top:61px; padding-bottom:61px; gap:34px; }
+  .how ol { margin-top:27px; gap:7px; }
+  .how li { grid-template-columns:35px auto; padding:11px; font-size:12px; }
+  .how-visual { min-height:448px; margin:0; padding:18px; border-radius:19px; }
+  .how-visual:before { width:244px; height:244px; }
+  .how-visual .phone.actual-screen { width:176px; }
+  .how-visual .step-label, .how-visual .step-card { display:none; }
+
+  .showcase { min-height:0; padding:60px 16px 52px; }
+  .showcase-title > p:not(.eyebrow) { margin-bottom:0; }
+  .showcase-devices { height:auto; width:auto; transform:none; display:grid; grid-template-columns:1fr; justify-items:center; gap:0; padding-top:28px; }
+  .showcase-devices > .phone.actual-screen { order:1; width:190px; height:auto; transform:none; border-radius:24px; }
+  .showcase-devices > .showcase-copy { display:block; position:static; order:2; width:100%; margin-top:28px; padding:0 0 0 14px; }
+  .showcase-copy h3 { font-size:22px; margin:11px 0 8px; }
+  .showcase-copy p { max-width:260px; }
+  .map-phone-wrap { display:none; }
+
+  .mission { padding:62px 16px; }
+  .mission-line { height:34px; margin-bottom:20px; }
+  .mission h2, .download-section h2 { font-size:38px; line-height:1.07; letter-spacing:-1.25px; }
+  .mission > p:not(.eyebrow) { font-size:15px; }
+  .mission-points { gap:8px 15px; margin-top:28px; }
+
+  .download-section { padding:61px 16px; gap:34px; }
+  .download-left > p:not(.eyebrow) { margin-bottom:25px; }
+  .release-panel { width:100%; padding:20px 16px; border-radius:14px; box-shadow:0 14px 28px rgba(2,53,67,.22); }
+  .release-panel-head { gap:10px; }
+  .release-panel-head b { white-space:nowrap; }
+
+  .install { padding-top:61px; padding-bottom:61px; gap:28px; }
+  .install-steps { padding-left:22px; }
+  .install-steps:before { left:10px; }
+  .install-steps div { min-height:55px; }
+  .install-steps span { font-size:14px; }
+  .faq { margin:0; padding:61px 16px; gap:26px; border:0; border-radius:0; }
+  .faq summary { padding:15px; font-size:14px; }
+  .faq details p { padding:0 15px 16px; }
+  footer { padding:30px 16px 34px; gap:19px; }
+  .footer-links { gap:10px 16px; }
+}
