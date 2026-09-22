@@ -284,7 +284,7 @@ footer{max-width:1170px;margin:auto;padding:36px 32px;display:grid;grid-template
   .mobile-download-section > p:not(.mobile-overline) { margin:14px 0 24px; color:#d4ebed; font-size:15px; line-height:1.55; }
   .mobile-download-section .download-button.light { width:100%; min-height:57px; border-radius:13px; }
   .mobile-download-section .release-meta { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-top:24px; }
-  .mobile-download-section .release-meta span { padding:9px 7px; border:1px solid rgba(255,255,255,.25); border-radius:10px; color:#e8f7f7; font-size:11px; }
+  .mobile-download-section .release-meta span { padding:9px 7px; border:1px solid rgba(255,255,255,.25); border-radius:10px; background:rgba(0,49,61,.25); color:#f4ffff; font-size:11px; }
   .mobile-download-section .release-meta span:first-child { border-left:1px solid rgba(255,255,255,.25); }
   .mobile-download-section .release-meta b { color:#b8dcdf; font-size:9px; letter-spacing:.6px; }
 
